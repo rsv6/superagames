@@ -1,8 +1,14 @@
+import React, { useState } from 'react';
+
 
 function App() {
+
+  const [ nome, setNome ] = useState("");
+
   return (
     <div >
-      <h2>Olá mundo React JS, por rsv6.</h2>
+      <input value={nome} onChange={(e) => setNome(e)} placeholder="Digite seu nome" />
+      <h2>Olá mundo React JS, por {nome}.</h2>
     </div>
   );
 }
