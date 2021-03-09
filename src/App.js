@@ -1,14 +1,52 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
+import Body from './components/Body';
+import Footer from './components/Footer';
+
+import produtos from './data/products.json';
+import './App.css';
+
+import MyContext from './Context/MyContext';
 
 function App() {
 
-  const [ nome, setNome ] = useState("");
+  const [ checkout, setCheckout ] = useState(0);
+  const [ carrinho, setCarrinho ] = useState([]);
+  const [ products, setProducts ] = useState([]);
+
+  useEffect(async ()=>{
+
+    await localStorage.setItem('products', JSON.stringify(produtos));
+    await setProducts(JSON.parse(localStorage.getItem('products')));
+
+    if(!localStorage.getItem('carrinho')){
+      await localStorage.setItem('carrinho', JSON.stringify(carrinho));
+    }
+
+    await setCarrinho(JSON.parse(localStorage.getItem('carrinho')));
+    
+    if(!localStorage.getItem('checkout')){
+      await localStorage.setItem('checkout', 0);
+    }
+    await setCheckout(parseInt(localStorage.getItem('checkout')));
+
+  },[])
+
+
+  useEffect(async () => {
+    await localStorage.setItem('carrinho', JSON.stringify(carrinho));
+  }, [carrinho])
 
   return (
-    <div >
-      <input value={nome} onChange={(e) => setNome(e.target.value)} placeholder="Digite seu nome" />
-      <h2>Olá mundo React JS, por {nome}.</h2>
+    <div className="container-fluid-app">
+        <MyContext.Provider value={{
+          checkout, setCheckout,
+          products, setProducts,
+          carrinho, setCarrinho
+        }}>
+            <Body />
+        </MyContext.Provider>
+      <Footer />
     </div>
   );
 }

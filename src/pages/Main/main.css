@@ -1,0 +1,164 @@
+.container-main-prin{
+    display: flex;
+}
+
+.container-main{
+    width: 100%;
+    height: 400px;
+    background-color:#0d264b;
+    color: #FFF;    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.container-destaque-pri{
+    /* padding-top: 5px;
+    padding-bottom: 5px; */
+    width: 49%;
+    height: 365px;
+    border-radius: 10px;
+    /* background-color:#1C2331; */
+    background-color: rgb(73, 66, 0);
+    
+    transition: transform .9s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-destaque-pri .destaque-pri-img img{
+    width: 300px;
+    height: 330px;
+}
+
+
+.destaque-pri-preco h3{
+    font-size: 30px;
+    color: #FFF;
+}
+
+.container-destaque-pri:hover{
+    box-shadow: 5px 8px 8px #2e1fff;
+    -ms-transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+    transform: scale(1.05);
+    transition: transform .9s;
+}
+
+.container-destaque-sec{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 49%;
+    height: 380px;
+    border-radius: 10px;
+    background-color: #0d264b;
+
+    transition: transform .9s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Filhos */
+    .container-bloco{
+        width: 98.5%;
+        height: 185px;
+        border-radius: 10px;
+        /* background-color: #1C2331; */
+        background-color: rgb(63, 1, 82);
+        /* background-color: rgb(3, 104, 62); */
+
+        display: flex;
+        flex-direction: row;
+        align-items:  center;
+        justify-content: space-between;
+    }
+    /* Filhos */
+        .mini-bloco-img img{
+            /* flex: 1; */
+            width: 200px;
+            height: 150px;
+        }
+
+        .mini-bloco-info{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+
+        .mini-bloco-info div {
+            padding-right: 10px;
+        }
+
+    .container-bloco:hover{
+        /* box-shadow: 5px 8px 8px #f8f8f8;
+        -ms-transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+        transform: scale(1.05);
+        transition: transform .9s; */
+        box-shadow: 5px 8px 8px #2e1fff;
+        -ms-transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+        transform: scale(1.05);
+        transition: transform .9s;
+    }
+    
+
+.container-main-sec{
+    /* height: 3000px; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0d264b;
+    /* margin-bottom: 40px; */
+}
+/* Filhos  */
+    .destaque-sec-img img{
+        background-color: #1C2331;
+        width: 300px;
+        height: 300px;
+    }
+
+
+    .container-bloco-games{
+        width: 530px;
+        height: 320px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        border-radius: 10px;
+        background-color: #1C2331;
+        color: #FFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container-bloco-games:hover{
+        z-index: 1;
+        -ms-transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+        transform: scale(1.1);
+        box-shadow: 1px 1px 5px 2px #f8f8f8;
+        transition: transform .2s;
+    }
+
+.btnAdd{
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: green;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.btnAdd:hover{
+    background-color: #76ff03;
+}
