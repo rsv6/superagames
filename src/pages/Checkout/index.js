@@ -15,7 +15,8 @@ function Contato(){
 
         if(checkout === 0){
             alert("Carrinho sem produto, você não pode finalizar pedido!!!");
-            window.location.replace("http://localhost:3000");
+            // window.location.replace("http://localhost:3000");
+            window.location.replace("https://main.didqgi5sa32zz.amplifyapp.com/")
             return
         }
 
@@ -27,7 +28,8 @@ function Contato(){
 
         alert("Pedido finalizado, compra realizada! Obrigado pela preferência!");
         setTimeout(() => {
-            window.location.replace("http://localhost:3000");
+            // window.location.replace("http://localhost:3000");
+            window.location.replace("https://main.didqgi5sa32zz.amplifyapp.com/")
         }, 500);
     }
 
